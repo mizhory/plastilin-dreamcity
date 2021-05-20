@@ -16,3 +16,9 @@ if(defined('LOADERFILE')) {
             require_once $file;
     }
 }
+
+global $APPLICATION, $USER;
+
+if($APPLICATION->getCurPage() != '/pub/' && !$USER->isAuthorized()){
+    LocalRedirect('/pub/');
+}

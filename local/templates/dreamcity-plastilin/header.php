@@ -1,5 +1,9 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<?IncludeTemplateLangFile(__FILE__); ?>
+<?
+IncludeTemplateLangFile(__FILE__);
+use \Bitrix\Main\Page\Asset;
+$c404 = $APPLICATION->getPageProperty('class_404');
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -11,7 +15,7 @@
 </head>
 <body><?$APPLICATION->ShowPanel();?>
 <div class="fullScreen">
-    <header class="mainHeader" id="stiky-header">
+    <header class="mainHeader<?if($c404=='Y'):?> mainHeader-page404<?endif;?>" id="stiky-header">
         <div class="headerPane">
             <div class="dream-container">
                 <div class="headerFlex">
