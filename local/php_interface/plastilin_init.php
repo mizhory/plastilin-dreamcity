@@ -1,6 +1,8 @@
 <?php
 $file_config = dirname(__FILE__) . '/../config/main_config.php';
 
+global $APPLICATION;
+
 if(file_exists($file_config))
     require_once $file_config;
 
@@ -17,8 +19,4 @@ if(defined('LOADERFILE')) {
     }
 }
 
-global $APPLICATION, $USER;
 
-if($APPLICATION->getCurPage() != '/pub/' && !$USER->isAuthorized()){
-    LocalRedirect('/pub/');
-}
