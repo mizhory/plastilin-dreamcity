@@ -11,7 +11,7 @@ $c404 = $APPLICATION->getPageProperty('class_404');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?$APPLICATION->ShowTitle()?></title>
     <?$APPLICATION->ShowHead();?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "assets/css/style.min.css");?>
+    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . "assets/css/style.min.css");?>
 </head>
 <body><?$APPLICATION->ShowPanel();?>
 <div class="fullScreen">
