@@ -1,7 +1,7 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?
 IncludeTemplateLangFile(__FILE__);
-use \Bitrix\Main\Page\Asset;
+
 $c404 = $APPLICATION->getPageProperty('class_404');
 ?>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ $c404 = $APPLICATION->getPageProperty('class_404');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?$APPLICATION->ShowTitle()?></title>
     <?$APPLICATION->ShowHead();?>
-    <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "assets/css/style.min.css");?>
+    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "assets/css/style.min.css");?>
 </head>
 <body><?$APPLICATION->ShowPanel();?>
 <div class="fullScreen">
