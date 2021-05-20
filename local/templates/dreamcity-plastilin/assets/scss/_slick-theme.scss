@@ -1,0 +1,159 @@
+/* Arrows */
+.catalogRow__item, .catalogCard__main_slider {
+  .slick-arrow {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    @include flex_center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(#fff,0.8);
+    border-radius: 50px;
+    @include transition;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    &:before {
+      content: '';
+      @include mask_options(10px, 17px, #3a4d60);
+      mask-image: url('../img/svg/27\ Стрелка\ мини-01.svg');
+      @include transition;
+    }
+    &:hover {
+      background-color: #3a4d60;
+      &:before{
+        background-color: #fff;
+      }
+    }
+  }
+  .slick-prev {
+    right: auto;
+    left: 20px;
+    padding-right: 4px;
+    &:before {
+      transform: rotate(180deg);
+    }
+  }
+  .slick-next {
+    left: auto;
+    right: 20px;
+    padding-left: 4px;
+  }
+  .slick-arrow:hover,
+  .slick-arrow:focus{
+    color: transparent;
+    outline: none;
+  }
+  .slick-prev.slick-disabled,
+  .slick-next.slick-disabled {
+    opacity: 0.45;
+    pointer-events: none;
+  }
+}
+
+
+/* Dots */
+// .slick-dotted.slick-slider {
+//   margin-bottom: 30px;
+// }
+.catalogRow__item, .catalogCard__main_slider{
+  .slick-dots {
+    position: absolute;
+    bottom: 25px;
+  
+    display: flex;
+    justify-content: center;
+  
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  
+    list-style: none;
+  
+    text-align: center;
+  }
+  .slick-dots li {
+    position: relative;
+  
+    @include flex_center;
+  
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    padding: 0;
+  
+    cursor: pointer;
+
+  }
+  .slick-dots li > svg {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 2s;
+  }
+  .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+  
+    display: inline-block;
+  
+    width: 24px;
+    height: 24px;
+  
+    cursor: pointer;
+  
+    color: transparent;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+  }
+  .slick-dots li button:hover,
+  .slick-dots li button:focus {
+    outline: none;
+  }
+  .slick-dots li button:hover:before,
+  .slick-dots li button:focus:before {
+    color: $green;
+  }
+  .slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 40px;
+    line-height: 24px;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    width: 24px;
+    height: 24px;
+  
+    content: '•';
+    text-align: center;
+    color: #fff;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .slick-dots li.slick-active {
+    svg {display: block;}
+    .dotAnim.active{
+      animation: dotLoad 5s;
+    }
+  }
+}
+@keyframes dotLoad {
+  0% {
+    stroke-dasharray: 0 68;
+  }
+  to {
+    stroke-dasharray: 68 0;
+  }
+}
+

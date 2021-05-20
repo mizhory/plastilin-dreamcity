@@ -1,0 +1,215 @@
+/*---------- mixins -----------*/
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin mask_options($width, $height, $color) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+@mixin image_center {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+@mixin transition {
+  transition: all .25s;
+}
+
+
+/*---------- breadcrumbs -----------*/
+.breadcrumbs {
+  position: absolute;
+  top: 120px;
+  font-size: 14px;
+  a {
+    word-break: break-word;
+    white-space: pre-wrap;
+    display: inline-block;
+    padding: 0 12px 0 0;
+    position: relative;
+    &:after {
+      content: '/';
+      position: absolute;
+      top: -1px;
+      right: 0;
+    }
+    &:hover {
+      color: $green;
+    }
+  }
+  span {
+    word-break: break-word;
+    color: $green;
+    font-weight: 700;
+  }
+}
+
+/*---------- pagination -----------*/
+.pagination__wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin: 0 auto 0;
+}
+.pagination__showMore{
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 48px;
+  @include transition;
+  span{
+    color: $green
+  }
+  &:hover{
+    color: $green
+  }
+}
+.pagination {
+  @include flex_center;
+  &__flex {
+    @include flex_center;
+    width: auto;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  &__pages {
+    display: flex;
+    justify-content: center;
+    margin: 0 -5px;
+    a {
+      @include flex_center;
+      width: 50px;
+      height: 50px;
+      font-weight: 500;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      @include transition;
+      margin: 0 5px;
+      &:hover {
+        background-color: #d8dbdf;
+        border-color: #d8dbdf;
+      }
+    }
+  }
+  &__arrow {
+    @include flex_center;
+    width: 50px;
+    height: 50px;
+    background-color: #3a4d60;
+    border-radius: 50%;
+    cursor: pointer;
+    @include transition;
+    &.disabled{
+      background-color: #9ca6af;
+      pointer-events: none;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      mask-image:  url('../img/svg/27\ Стрелка\ мини-01.svg');
+      @include mask_options(10px, 17px, #fff);  
+    }
+    &:hover {
+      background-color: $green;
+    }
+  }
+}
+.pagination--active {
+  border-color: #3a4d60 !important;
+  &:hover{
+    background-color: transparent !important;
+  }
+}
+.pagination--non-active {
+  border: none !important;
+  pointer-events: none;
+}
+.pagination__arrow-prev {
+  margin-right: 20px;
+  padding-right: 4px;
+  &:after {
+    transform: rotate(180deg);
+  }
+}
+.pagination__arrow-next {
+  margin-left: 20px;
+  padding-left: 4px;
+}
+
+/*---------- slider nav -----------*/
+.slider__nav{
+  display: flex;
+}
+.slider__count{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 30px;
+}
+.currentSlide{color: $green;}
+.allSlide{
+  color: #aab2bb;
+  position: relative;
+  padding-left: 12px;
+  &:before{
+    content: '';
+    top: 1px;
+    left: 5px;
+    position: absolute;
+    display: inline-block;
+    background-color: #aab2bb;
+    width: 2px;
+    height: 14px;
+  }
+}
+.slider__arrows{
+  display: flex;
+}
+.slider__arrow{
+  width: 32px;
+  height: 17px;
+  cursor: pointer;
+  svg{
+    width: 100%;
+    height: 100%;
+    .cls-1, .cls-2 {@include transition;}    
+  }
+  &:hover{
+    .cls-1, .cls-2 {fill: $green;}
+  }
+  &-prev{
+    margin-right: 20px;
+    svg{transform: scale(-1, 1)}
+  }
+}
+
+/*---------- input autocomplite -----------*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+  transition: color 9999s ease-out, background-color 9999s ease-out;
+  transition-delay: 9999s;
+}
+
+.noUi-horizontal .noUi-tooltip{
+  opacity: 1 !important;
+}
