@@ -22,20 +22,20 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                     <div class="menuPane" id="burger-pane">
                         <div class="menuPane__inner">
                             <div class="menuPane__logo"><a class="menuLogo" href="#"><span class="menuLogo__desktop"><img
-                                                src="<?=SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . 'assets/'?>img/41441bb52226d181cdee3f4fb2ddf21c.svg" alt="Лого"></span><span
-                                            class="menuLogo__moibile"><img src="<?=SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . 'assets/'?>img/4b4f6571f166bb19037e6d41350876ff.svg"
+                                                src="/local/assets/img/41441bb52226d181cdee3f4fb2ddf21c.svg" alt="Лого"></span><span
+                                            class="menuLogo__moibile"><img src="/local/assets/img/4b4f6571f166bb19037e6d41350876ff.svg"
                                                                            alt="Лого"></span></a></div>
                             <div class="menuPane__btn">
                                 <button class="arrBtn" id="burger-btn"><span class="arrBtn__inner"><span class="arrBtn__text">Меню
                       </span><span class="arrBtn__ico">
                         <svg class="arrBtn__svgr" width="50px" height="50px">
-                          <use xlink:href="<?=SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . 'assets/'?>img/svg/icons.svg#menuBurger"></use>
+                          <use xlink:href="/local/assets/img/svg/icons.svg#menuBurger"></use>
                         </svg><span class="arrBtn__abs">
                           <svg width="32px" height="17px">
-                            <use xlink:href="<?=SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . 'assets/'?>img/svg/icons.svg#arrowBurger"></use>
+                            <use xlink:href="/local/assets/img/svg/icons.svg#arrowBurger"></use>
                           </svg></span><span class="arrBtn__cls">
                           <svg width="16px" height="16px">
-                            <use xlink:href="<?=SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . 'assets/'?>img/svg/icons.svg#cls"></use>
+                            <use xlink:href="/local/assets/img/svg/icons.svg#cls"></use>
                           </svg></span></span></span></button>
                             </div>
                         </div>
@@ -44,10 +44,34 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                         <div class="menuList">
                             <div class="menuList__item"><a class="menuList__point" href="#">Об агентстве</a></div>
                             <div class="menuList__item"><a class="menuList__point" href="#">Контакты</a></div>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:menu",
+                                "",
+                                Array(
+                                    "ALLOW_MULTI_SELECT" => "N",
+                                    "CHILD_MENU_TYPE" => "left",
+                                    "DELAY" => "N",
+                                    "MAX_LEVEL" => "1",
+                                    "MENU_CACHE_GET_VARS" => array(""),
+                                    "MENU_CACHE_TIME" => "3600",
+                                    "MENU_CACHE_TYPE" => "N",
+                                    "MENU_CACHE_USE_GROUPS" => "Y",
+                                    "ROOT_MENU_TYPE" => "top",
+                                    "USE_EXT" => "N"
+                                )
+                            );?>
                             <div class="menuList__item">
-                                <button class="menuList__point" data-modal-open="m-2"><span class="menuList__ico"><img
-                                                src="data:image/svg+xml,%3csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 13.69'%3e%3cdefs%3e%3cstyle%3e.cls-1%7bfill:%2343b7b5;%7d%3c/style%3e%3c/defs%3e%3ctitle%3e04 Онлайн-оплата%3c/title%3e%3cpath class='cls-1' d='M0,12.65a1,1,0,0,0,1,1H17a1,1,0,0,0,1-1V11.18H0Z'/%3e%3cpath class='cls-1' d='M17,0H1.05A1,1,0,0,0,0,1.05V9.74H18V1.05A1,1,0,0,0,17,0ZM4.87,4.43a1.52,1.52,0,0,1-1-.4,1.48,1.48,0,0,1-1,.4,1.47,1.47,0,0,1,0-2.93,1.44,1.44,0,0,1,1,.41,1.46,1.46,0,1,1,1,2.52Z'/%3e%3c/svg%3e"
-                                                alt="Онлайн оплата"></span> Онлайн-оплата</button>
+
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    "",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "EDIT_TEMPLATE" => "",
+                                        "PATH" => "/local/include/tpl/header_tpl.php"
+                                    )
+                                );?>
                             </div>
                         </div>
                     </nav>
@@ -56,13 +80,13 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                             <button class="aroundIco" data-modal-open="m-4">
                                 <div class="aroundIco__abs">
                                     <svg>
-                                        <use xlink:href="<?=SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . 'assets/'?>img/svg/icons.svg#ligntC"></use>
+                                        <use xlink:href="/local/assets/img/svg/icons.svg#ligntC"></use>
                                     </svg>
                                 </div>
                                 <div class="aroundIco__inner">
                                     <div class="aroundIco__center">
                                         <svg width="19px" height="18px">
-                                            <use xlink:href="<?=SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . 'assets/'?>img/svg/icons.svg#search"></use>
+                                            <use xlink:href="/local/assets/img/svg/icons.svg#search"></use>
                                         </svg>
                                     </div>
                                 </div>
@@ -74,13 +98,13 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                             <button class="aroundIco" data-modal-open="m-1">
                                 <div class="aroundIco__abs">
                                     <svg>
-                                        <use xlink:href="<?=SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . 'assets/'?>img/svg/icons.svg#ligntC"></use>
+                                        <use xlink:href="/local/assets/img/svg/icons.svg#ligntC"></use>
                                     </svg>
                                 </div>
                                 <div class="aroundIco__inner">
                                     <div class="aroundIco__center">
                                         <svg width="18px" height="18px">
-                                            <use xlink:href="<?=SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . 'assets/'?>img/svg/icons.svg#phone"></use>
+                                            <use xlink:href="/local/assets/img/svg/icons.svg#phone"></use>
                                         </svg>
                                     </div>
                                 </div>
@@ -104,6 +128,22 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                             <div class="collapsedMenu__item collapsedMenu__left">
                                 <div class="collapsedItem">
                                     <div class="collapsedItem__inner">
+                                        <?$APPLICATION->IncludeComponent(
+                                            "bitrix:menu",
+                                            "",
+                                            Array(
+                                                "ALLOW_MULTI_SELECT" => "N",
+                                                "CHILD_MENU_TYPE" => "left",
+                                                "DELAY" => "N",
+                                                "MAX_LEVEL" => "1",
+                                                "MENU_CACHE_GET_VARS" => array(""),
+                                                "MENU_CACHE_TIME" => "3600",
+                                                "MENU_CACHE_TYPE" => "N",
+                                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                                "ROOT_MENU_TYPE" => "top",
+                                                "USE_EXT" => "N"
+                                            )
+                                        );?>
                                         <ul class="mainMenu" data-menu-rel>
                                             <li class="mainMenu__item"><a class="mainMenu__link __active" href="#"
                                                                           data-menu-open="1">Аренда</a></li>
@@ -119,12 +159,12 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                                                            placeholder="Адрес, метро, район или id"><span class="customInput__cls">
                               <button class="customInput__clear" data-dd-clear>
                                 <svg width="20px" height="20px">
-                                  <use xlink:href="<?=SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . 'assets/'?>img/svg/icons.svg#cls"></use>
+                                  <use xlink:href="/local/assets/img/svg/icons.svg#cls"></use>
                                 </svg>
                               </button></span><span class="customInput__btn">
                               <button class="fieldBox__btn"><span class="fieldBox__bi">
                                   <svg width="23px" height="22px">
-                                    <use xlink:href="<?=SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . 'assets/'?>img/svg/icons.svg#search"></use>
+                                    <use xlink:href="/local/assets/img/svg/icons.svg#search"></use>
                                   </svg></span></button></span>
                                                     <div class="fieldBox__dd" data-dd>
                                                         <div class="ddCollapsed">
