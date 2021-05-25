@@ -246,7 +246,7 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                             <div class="mainBanner__slider">
                                 <div class="radialSlider radialSlider-single">
                                     <div class="radialSlider-inner">
-                                        <div class="radialSlider-inner--item __active-slide"><img src="./local/img/banner-1.3e9787592d4ef739f7e2a9e4b192a9eb.png" alt=""></div>
+                                        <div class="radialSlider-inner--item __active-slide"><img src="/local/img/banner-1.3e9787592d4ef739f7e2a9e4b192a9eb.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
