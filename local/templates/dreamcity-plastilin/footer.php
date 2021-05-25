@@ -2,6 +2,7 @@
 IncludeTemplateLangFile(__FILE__);
 use Bitrix\Main\Page\Asset;
 ?>
+</main>
 <footer class="mainFooter">
     <div class="mainFooter__top">
         <div class="dream-container">
