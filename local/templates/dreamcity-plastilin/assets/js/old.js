@@ -8178,19 +8178,28 @@
           t()("[data-dd-box]").removeClass("__active");
         }
       }));
+
       // price slider
       let e = document.getElementById("price-slider");
       let i = document.getElementById("price-1");
       let n = document.getElementById("price-2");
       let r = [i, n];
       o().create(e, {
-        start: [1e7, 400500800],
+        start: [0, 410500800],
         connect: true,
         range: {
           min: [0],
           max: 410500800
         },
-        tooltips: [true, true]
+        tooltips: [true, true],
+        format: {
+          from: function (value) {
+            return parseInt(value);
+          },
+          to: function (value) {
+            return parseInt(value);
+          }
+        }
       });
       e.noUiSlider.on("update", (function (e, t) {
         r[t].value = e[t];
@@ -8309,13 +8318,21 @@
         let n3 = document.getElementById("price-22");
         let r3 = [i3, n3];
         o().create(e3, {
-          start: [1e7, 400500800],
+          start: [0, 410500800],
           connect: true,
           range: {
             min: [0],
             max: 410500800
           },
-          tooltips: [true, true]
+          tooltips: [true, true],
+          format: {
+            from: function (value) {
+              return parseInt(value);
+            },
+            to: function (value) {
+              return parseInt(value);
+            }
+          }
         });
         e3.noUiSlider.on("update", (function (e3, t3) {
           r3[t3].value = e3[t3];

@@ -17,7 +17,7 @@ function CheckoutAuthorizedUserOrRedirect() {
     if(!is_object($USER))
         $USER = $GLOBALS['USER'];
 
-    if($APPLICATION->getCurPage() != '/pub/' && !$USER->isAuthorized()){
+    if(($APPLICATION->getCurPage() != '/pub/' || $APPLICATION->getCurPage() != '/bitrix/') && !$USER->isAuthorized()){
         LocalRedirect('/pub/');
     }
 }
