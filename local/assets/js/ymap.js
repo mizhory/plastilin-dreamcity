@@ -29,7 +29,7 @@ $(document).ready(function () {
         [55.760373, 37.655634],
         // myMap.getCenter(),
         {
-          balloonContent: '<div class="mapHint"><div class="mapHint__image"><img src="../templates/dreamcity-plastilin/assets/img/similar1.png"></div><div class= "mapHint__body"><div class="mapHint__title">3-комн. квартира, 105,6 м²</div> <div class="mapHint__geo">Москва, САО, р-н Аэропорт, Ленинградский просп., 36</div><div class="mapHint__price"><span>1200 ₽ </span>за месяц</div></div></div>',
+          balloonContent: '<div class="mapHint"><div class="mapHint__image"><img src="../../templates/dreamcity-plastilin/assets/img/similar1.png"></div><div class= "mapHint__body"><div class="mapHint__title">3-комн. квартира, 105,6 м²</div> <div class="mapHint__geo">Москва, САО, р-н Аэропорт, Ленинградский просп., 36</div><div class="mapHint__price"><span>1200 ₽ </span>за месяц</div></div></div>',
           hideIconOnBalloonOpen: false,
         },
         {
