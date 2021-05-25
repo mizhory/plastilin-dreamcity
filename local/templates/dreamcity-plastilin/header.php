@@ -13,7 +13,7 @@ $c404 = $APPLICATION->getPageProperty('class_404');
     <?$APPLICATION->ShowHead();?>
     <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . DIRECTORY_SEPARATOR . "assets/css/style.min.css");?>
 </head>
-<body><div id="panel"><?$APPLICATION->ShowPanel();?></div>
+<body>
 <div class="fullScreen">
     <header class="mainHeader<?if($c404=='Y'):?> mainHeader-page404<?endif;?>" id="stiky-header">
         <div class="headerPane">
