@@ -42,37 +42,16 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                     </div>
                     <nav class="menuNav">
                         <div class="menuList">
-                            <div class="menuList__item"><a class="menuList__point" href="#">Об агентстве</a></div>
-                            <div class="menuList__item"><a class="menuList__point" href="#">Контакты</a></div>
                             <?$APPLICATION->IncludeComponent(
-                                "bitrix:menu",
-                                "plastilin-leftmenu-animated",
+                                "bitrix:main.include",
+                                "",
                                 Array(
-                                    "ALLOW_MULTI_SELECT" => "N",
-                                    "CHILD_MENU_TYPE" => "left",
-                                    "DELAY" => "N",
-                                    "MAX_LEVEL" => "1",
-                                    "MENU_CACHE_GET_VARS" => array(""),
-                                    "MENU_CACHE_TIME" => "3600",
-                                    "MENU_CACHE_TYPE" => "N",
-                                    "MENU_CACHE_USE_GROUPS" => "Y",
-                                    "ROOT_MENU_TYPE" => "top",
-                                    "USE_EXT" => "N"
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/local/include/tpl/header_tpl.php"
                                 )
                             );?>
-                            <div class="menuList__item">
-
-                                <?$APPLICATION->IncludeComponent(
-                                    "bitrix:main.include",
-                                    "",
-                                    Array(
-                                        "AREA_FILE_SHOW" => "file",
-                                        "AREA_FILE_SUFFIX" => "inc",
-                                        "EDIT_TEMPLATE" => "",
-                                        "PATH" => "/local/include/tpl/header_tpl.php"
-                                    )
-                                );?>
-                            </div>
                         </div>
                     </nav>
                     <div class="menuContact __hidden">
@@ -130,28 +109,21 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                                     <div class="collapsedItem__inner">
                                         <?$APPLICATION->IncludeComponent(
                                             "bitrix:menu",
-                                            "",
+                                            "plastilin-leftmenu-animated",
                                             Array(
                                                 "ALLOW_MULTI_SELECT" => "N",
                                                 "CHILD_MENU_TYPE" => "left",
                                                 "DELAY" => "N",
-                                                "MAX_LEVEL" => "1",
+                                                "MAX_LEVEL" => "3",
                                                 "MENU_CACHE_GET_VARS" => array(""),
                                                 "MENU_CACHE_TIME" => "3600",
                                                 "MENU_CACHE_TYPE" => "N",
                                                 "MENU_CACHE_USE_GROUPS" => "Y",
                                                 "ROOT_MENU_TYPE" => "top",
-                                                "USE_EXT" => "N"
+                                                "USE_EXT" => "Y"
                                             )
                                         );?>
-                                        <ul class="mainMenu" data-menu-rel>
-                                            <li class="mainMenu__item"><a class="mainMenu__link __active" href="#"
-                                                                          data-menu-open="1">Аренда</a></li>
-                                            <li class="mainMenu__item"><a class="mainMenu__link" href="#" data-menu-open="2">Продажа</a>
-                                            </li>
-                                            <li class="mainMenu__item"><a class="mainMenu__link" href="#" data-menu-open="3">Коммерческая
-                                                    недвижимость</a></li>
-                                        </ul>
+
                                         <div class="collapsedItem__search">
                                             <div class="searchBox">
                                                 <div class="fieldBox" data-input-field>
