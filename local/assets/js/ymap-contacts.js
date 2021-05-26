@@ -21,7 +21,7 @@ $(document).ready(function () {
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: '../img/svg/map_geo-dream.svg',
+          iconImageHref: '/local/img/svg/map_geo-dream.svg',
           iconImageSize: [46, 61],
           iconImageOffset: [-32, -31],
         }
