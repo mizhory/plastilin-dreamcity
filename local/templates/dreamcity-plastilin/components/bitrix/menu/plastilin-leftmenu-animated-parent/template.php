@@ -1,18 +1,24 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?if(!empty($arResult)):?>
 
-<?foreach($arResult as $k=>$arMenuElem):?>
-    <?#=$arMenuElem["TEXT"]?>
-        <div class="collapsedNext<?if($arMenuElem["SELECTED"]=='true'):?> __active<?endif;?>" data-menu-content="<?=$k?>">
-            <div class="mobileHLink"><a href="<?=$arMenuElem["LINK"]?>">Смотреть все <?=$k?></a></div>
-            <ul class="nextMenu">
-                <li class="nextMenu__item"><a class="nextMenu__link" href="#">Квартира <?=$k?></a></li>
-                <li class="nextMenu__item"><a class="nextMenu__link" href="#">Таунхаус <?=$k?></a></li>
-                <li class="nextMenu__item"><a class="nextMenu__link" href="#">Дом <?=$k?></a></li>
-            </ul>
-        </div>
-<?endforeach;?>
+    <?foreach($arResult as $k=>$arMenuElem):?>
+        <?if ($previousLevel && $arItem["DEPTH_LEVEL"] < $previousLevel):?>
+                <?=str_repeat("</ul></div>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
+        <?endif?>
+        <?if($arMenuElem["IS_PARENT"]==true):?>
+            <div class="collapsedNext<?if($arMenuElem["SELECTED"]=='true'):?> __active<?endif;?>" data-menu-content="<?=$k?>">
+                <div class="mobileHLink"><a href="<?=$arMenuElem["LINK"]?>">Смотреть все</a></div>
+                <ul class="nextMenu">
+        <?else:?>
+                <li class="nextMenu__item"><a class="nextMenu__link" href="<?=$arMenuElem["LINK"]?>"><?=$arMenuElem["TEXT"]?></a></li>
+        <?endif;?>
+        <?$previousLevel = $arItem["DEPTH_LEVEL"];?>
+    <?endforeach;?>
+    <?if ($previousLevel > 1)://close last item tags?>
+        <?=str_repeat("</ul></div>", ($previousLevel-1) );?>
+    <?endif?>
 <?endif;?>
+
 <!--
 <div class="collapsedNext __active" data-menu-content="1">
                                             <div class="mobileHLink"><a href="#">Смотреть все </a></div>
