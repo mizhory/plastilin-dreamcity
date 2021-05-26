@@ -6846,7 +6846,7 @@
       t["default"] = {
         id: "arrowBurger-usage",
         viewBox: "0 0 31.57 16.41",
-        url: i.p + "./img/svg/icons.svg#arrowBurger",
+        url: i.p + "/local/img/svg/icons.svg#arrowBurger",
         toString: function () {
           return this.url;
         }
@@ -6858,7 +6858,7 @@
       t["default"] = {
         id: "chevrone-usage",
         viewBox: "0 0 9.62 16.41",
-        url: i.p + "./img/svg/icons.svg#chevrone",
+        url: i.p + "/local/img/svg/icons.svg#chevrone",
         toString: function () {
           return this.url;
         }
@@ -6870,7 +6870,7 @@
       t["default"] = {
         id: "clock-usage",
         viewBox: "0 0 12.5 12.5",
-        url: i.p + "./img/svg/icons.svg#clock",
+        url: i.p + "/local/img/svg/icons.svg#clock",
         toString: function () {
           return this.url;
         }
@@ -6882,7 +6882,7 @@
       t["default"] = {
         id: "cls-usage",
         viewBox: "0 0 16.41 16.41",
-        url: i.p + "./img/svg/icons.svg#cls",
+        url: i.p + "/local/img/svg/icons.svg#cls",
         toString: function () {
           return this.url;
         }
@@ -6894,7 +6894,7 @@
       t["default"] = {
         id: "fb-usage",
         viewBox: "0 0 10 20",
-        url: i.p + "./img/svg/icons.svg#fb",
+        url: i.p + "/local/img/svg/icons.svg#fb",
         toString: function () {
           return this.url;
         }
@@ -6906,7 +6906,7 @@
       t["default"] = {
         id: "footer-1-usage",
         viewBox: "0 0 70.03 80",
-        url: i.p + "./img/svg/icons.svg#footer-1",
+        url: i.p + "/local/img/svg/icons.svg#footer-1",
         toString: function () {
           return this.url;
         }
@@ -6918,7 +6918,7 @@
       t["default"] = {
         id: "footer-2-usage",
         viewBox: "0 0 75.3 79",
-        url: i.p + "./img/svg/icons.svg#footer-2",
+        url: i.p + "/local/img/svg/icons.svg#footer-2",
         toString: function () {
           return this.url;
         }
@@ -6930,7 +6930,7 @@
       t["default"] = {
         id: "footer-3-usage",
         viewBox: "0 0 62.78 79.52",
-        url: i.p + "./img/svg/icons.svg#footer-3",
+        url: i.p + "/local/img/svg/icons.svg#footer-3",
         toString: function () {
           return this.url;
         }
@@ -6942,7 +6942,7 @@
       t["default"] = {
         id: "footer-4-usage",
         viewBox: "0 0 79.91 79.31",
-        url: i.p + "./img/svg/icons.svg#footer-4",
+        url: i.p + "/local/img/svg/icons.svg#footer-4",
         toString: function () {
           return this.url;
         }
@@ -6954,7 +6954,7 @@
       t["default"] = {
         id: "geo-address-usage",
         viewBox: "0 0 11.41 17.09",
-        url: i.p + "./img/svg/icons.svg#geo-address",
+        url: i.p + "/local/img/svg/icons.svg#geo-address",
         toString: function () {
           return this.url;
         }
@@ -6966,7 +6966,7 @@
       t["default"] = {
         id: "inst-usage",
         viewBox: "0 0 20 20",
-        url: i.p + "./img/svg/icons.svg#inst",
+        url: i.p + "/local/img/svg/icons.svg#inst",
         toString: function () {
           return this.url;
         }
@@ -6978,7 +6978,7 @@
       t["default"] = {
         id: "ligntC-usage",
         viewBox: "0 0 62.48 64",
-        url: i.p + "./img/svg/icons.svg#ligntC",
+        url: i.p + "/local/img/svg/icons.svg#ligntC",
         toString: function () {
           return this.url;
         }
@@ -6990,7 +6990,7 @@
       t["default"] = {
         id: "marker-usage",
         viewBox: "0 0 15.53 22",
-        url: i.p + "./img/svg/icons.svg#marker",
+        url: i.p + "/local/img/svg/icons.svg#marker",
         toString: function () {
           return this.url;
         }
@@ -7002,7 +7002,7 @@
       t["default"] = {
         id: "menuBurger-usage",
         viewBox: "0 0 47.99 50",
-        url: i.p + "./img/svg/icons.svg#menuBurger",
+        url: i.p + "/local/img/svg/icons.svg#menuBurger",
         toString: function () {
           return this.url;
         }
@@ -7014,7 +7014,7 @@
       t["default"] = {
         id: "pencil-usage",
         viewBox: "0 0 18.11 18.11",
-        url: i.p + "./img/svg/icons.svg#pencil",
+        url: i.p + "/local/img/svg/icons.svg#pencil",
         toString: function () {
           return this.url;
         }
@@ -7026,7 +7026,7 @@
       t["default"] = {
         id: "personal-usage",
         viewBox: "0 0 18.49 17.84",
-        url: i.p + "./img/svg/icons.svg#personal",
+        url: i.p + "/local/img/svg/icons.svg#personal",
         toString: function () {
           return this.url;
         }
@@ -7038,7 +7038,7 @@
       t["default"] = {
         id: "phone-usage",
         viewBox: "0 0 18 18",
-        url: i.p + "./img/svg/icons.svg#phone",
+        url: i.p + "/local/img/svg/icons.svg#phone",
         toString: function () {
           return this.url;
         }
@@ -7050,7 +7050,7 @@
       t["default"] = {
         id: "post-usage",
         viewBox: "0 0 18 14",
-        url: i.p + "./img/svg/icons.svg#post",
+        url: i.p + "/local/img/svg/icons.svg#post",
         toString: function () {
           return this.url;
         }
@@ -7062,7 +7062,7 @@
       t["default"] = {
         id: "search-usage",
         viewBox: "0 0 22 21.71",
-        url: i.p + "./img/svg/icons.svg#search",
+        url: i.p + "/local/img/svg/icons.svg#search",
         toString: function () {
           return this.url;
         }
@@ -7074,7 +7074,7 @@
       t["default"] = {
         id: "tel-small-usage",
         viewBox: "0 0 18.01 18",
-        url: i.p + "./img/svg/icons.svg#tel-small",
+        url: i.p + "/local/img/svg/icons.svg#tel-small",
         toString: function () {
           return this.url;
         }
@@ -7086,7 +7086,7 @@
       t["default"] = {
         id: "vk-usage",
         viewBox: "0 0 20 11.72",
-        url: i.p + "./img/svg/icons.svg#vk",
+        url: i.p + "/local/img/svg/icons.svg#vk",
         toString: function () {
           return this.url;
         }
@@ -7098,7 +7098,7 @@
       t["default"] = {
         id: "youtube-usage",
         viewBox: "0 0 20 15.01",
-        url: i.p + "./img/svg/icons.svg#youtube",
+        url: i.p + "/local/img/svg/icons.svg#youtube",
         toString: function () {
           return this.url;
         }
