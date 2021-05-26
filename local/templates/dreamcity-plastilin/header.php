@@ -158,41 +158,22 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                             <div class="collapsedMenu__item collapsedMenu__right">
                                 <div class="collapsedItem">
                                     <div class="collapsedItem__inner">
-                                        <div class="collapsedNext __active" data-menu-content="1">
-                                            <div class="mobileHLink"><a href="#">Смотреть все </a></div>
-                                            <ul class="nextMenu">
-                                                <li class="nextMenu__item"><a class="nextMenu__link" href="#">Квартира</a></li>
-                                                <li class="nextMenu__item"><a class="nextMenu__link" href="#">Таунхаус</a></li>
-                                                <li class="nextMenu__item"><a class="nextMenu__link" href="#">Дом</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="collapsedNext" data-menu-content="2">
-                                            <ul class="nextMenu">
-                                                <li class="nextMenu__item"><a class="nextMenu__link" href="#">Квартира 1</a></li>
-                                                <li class="nextMenu__item"><a class="nextMenu__link" href="#">Таунхаус 1</a></li>
-                                                <li class="nextMenu__item"><a class="nextMenu__link" href="#">Дом 1</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="collapsedNext" data-menu-content="3">
-                                            <ul class="nextMenu">
-                                                <li class="nextMenu__item"><a class="nextMenu__link" href="#">Аренда </a>
-                                                    <ul class="lastMenu">
-                                                        <li class="lastMenu__item"> <a class="lastMenu__link" href="#">Офис</a></li>
-                                                        <li class="lastMenu__item"> <a class="lastMenu__link" href="#">Помещение свободного
-                                                                назначения</a></li>
-                                                        <li class="lastMenu__item"> <a class="lastMenu__link" href="#">Здание</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="nextMenu__item"><a class="nextMenu__link" href="#">Продажа</a>
-                                                    <ul class="lastMenu">
-                                                        <li class="lastMenu__item"> <a class="lastMenu__link" href="#">Офис</a></li>
-                                                        <li class="lastMenu__item"> <a class="lastMenu__link" href="#">Помещение свободного
-                                                                назначения</a></li>
-                                                        <li class="lastMenu__item"> <a class="lastMenu__link" href="#">Здание</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <?$APPLICATION->IncludeComponent(
+                                            "bitrix:menu",
+                                            "plastilin-leftmenu-animated-parent",
+                                            Array(
+                                                "ALLOW_MULTI_SELECT" => "N",
+                                                "CHILD_MENU_TYPE" => "left",
+                                                "DELAY" => "N",
+                                                "MAX_LEVEL" => "3",
+                                                "MENU_CACHE_GET_VARS" => array(""),
+                                                "MENU_CACHE_TIME" => "3600",
+                                                "MENU_CACHE_TYPE" => "N",
+                                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                                "ROOT_MENU_TYPE" => "top",
+                                                "USE_EXT" => "Y"
+                                            )
+                                        );?>
                                     </div>
                                 </div>
                             </div>
@@ -208,10 +189,15 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                 <div class="dream-container">
                     <div class="mainBanner">
                         <div class="mainBanner__inner">
-                            <div class="breadcrumbs breadcrumbs-adapt" style="max-width: 1319px;">
-                                <a href="#">Главная</a>
-                                <span>Коммерческая недвижимость</span>
-                            </div>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:breadcrumb",
+                                "dreamcity-breadcrumb",
+                                Array(
+                                    "PATH" => "",
+                                    "SITE_ID" => "s2",
+                                    "START_FROM" => "0"
+                                )
+                            );?><br>
                             <div class="mainBanner__info">
                                 <div class="mainBanner__textfield mainBanner__textfield-static">
                                     <div class="sup-title">Dream <span class="hl">City</span></div>
