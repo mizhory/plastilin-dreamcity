@@ -114,13 +114,13 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                                                 "ALLOW_MULTI_SELECT" => "N",
                                                 "CHILD_MENU_TYPE" => "left",
                                                 "DELAY" => "N",
-                                                "MAX_LEVEL" => "3",
+                                                "MAX_LEVEL" => "1",
                                                 "MENU_CACHE_GET_VARS" => array(""),
                                                 "MENU_CACHE_TIME" => "3600",
                                                 "MENU_CACHE_TYPE" => "N",
                                                 "MENU_CACHE_USE_GROUPS" => "Y",
                                                 "ROOT_MENU_TYPE" => "top",
-                                                "USE_EXT" => "Y"
+                                                "USE_EXT" => "N"
                                             )
                                         );?>
 
@@ -184,6 +184,16 @@ $c404 = $APPLICATION->getPageProperty('class_404');
         </div>
     </header>
     <main class="siteContent">
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:main.include",
+            "",
+            Array(
+                "AREA_FILE_SHOW" => "file",
+                "AREA_FILE_SUFFIX" => "inc",
+                "EDIT_TEMPLATE" => "",
+                "PATH" => "/local/include/tpl/header_first_section.php"
+            )
+        );?>
         <section class="siteSection siteSection-main">
             <div class="screenBox">
                 <div class="dream-container">
@@ -209,20 +219,39 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                                 <div class="mainBanner__bot">
                                     <div class="searchBox">
                                         <div class="fieldBox" data-input-field="">
-                                            <input class="customInput" type="search" id="s-1" data-custom-input="" data-input-dd="" placeholder="Адрес, метро, район или id"><span class="customInput__cls">
-                          <button class="customInput__clear" data-dd-clear="">
-                            <svg width="20px" height="20px">
-                              <use xlink:href="/local/img/svg/icons.svg#cls"></use>
-                            </svg>
-                          </button></span><span class="customInput__btn">
-                          <button class="fieldBox__btn"><span class="fieldBox__bi">
-                              <svg width="23px" height="22px">
-                                <use xlink:href="/local/img/svg/icons.svg#search"></use>
-                              </svg></span></button></span>
+                                            <input class="customInput" type="search" id="s-1" data-custom-input="" data-input-dd="" placeholder="Адрес, метро, район или id">
+                                            <span class="customInput__cls">
+                                              <button class="customInput__clear" data-dd-clear="">
+                                                <svg width="20px" height="20px">
+                                                  <use xlink:href="/local/img/svg/icons.svg#cls"></use>
+                                                </svg>
+                                              </button>
+                                            </span>
+                                            <span class="customInput__btn">
+                                              <button class="fieldBox__btn">
+                                                  <span class="fieldBox__bi">
+                                                  <svg width="23px" height="22px">
+                                                    <use xlink:href="/local/img/svg/icons.svg#search"></use>
+                                                  </svg></span></button>
+                                            </span>
                                             <div class="fieldBox__dd" data-dd="">
                                                 <div class="ddCollapsed">
-                                                    <div class="ddCollapsedList"><a class="ddCollapsedList__item" href="#"><span class="hl">Моск</span>ва</a><a class="ddCollapsedList__item" href="#"><span class="hl">Моск</span>овский, поселок <span class="hl">Моск</span>овский, г. <span class="hl">Моск</span>ва</a><a class="ddCollapsedList__item" href="#"><span class="hl">Моск</span>али, Томский р-а, Иркутская обл.</a><a class="ddCollapsedList__item" href="#"><span class="hl">Моск</span>овский, г.
-                                                            Екатеринбург, Сверловская обл.</a></div>
+                                                    <div class="ddCollapsedList">
+                                                        <a class="ddCollapsedList__item" href="#">
+                                                            <span class="hl">Моск</span>ва
+                                                        </a>
+                                                        <a class="ddCollapsedList__item" href="#">
+                                                            <span class="hl">Моск</span>овский, поселок
+                                                            <span class="hl">Моск</span>овский, г.
+                                                            <span class="hl">Моск</span>ва
+                                                        </a>
+                                                        <a class="ddCollapsedList__item" href="#">
+                                                            <span class="hl">Моск</span>али, Томский р-а, Иркутская обл.
+                                                        </a>
+                                                        <a class="ddCollapsedList__item" href="#">
+                                                            <span class="hl">Моск</span>овский, г.
+                                                            Екатеринбург, Сверловская обл.</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -232,7 +261,9 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                             <div class="mainBanner__slider">
                                 <div class="radialSlider radialSlider-single">
                                     <div class="radialSlider-inner">
-                                        <div class="radialSlider-inner--item __active-slide"><img src="/local/img/banner-1.3e9787592d4ef739f7e2a9e4b192a9eb.png" alt=""></div>
+                                        <div class="radialSlider-inner--item __active-slide">
+                                            <img src="/local/img/banner-1.3e9787592d4ef739f7e2a9e4b192a9eb.png" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -243,16 +274,26 @@ $c404 = $APPLICATION->getPageProperty('class_404');
                 </div>
                 <div class="botBar botBar-rel">
                     <div class="dream-container">
-                        <button class="arrBtn arrBtn-white" data-modal-open="m-3"><span class="arrBtn__inner"><span class="arrBtn__text">Подбор недвижимости</span><span class="arrBtn__ico">
-                    <svg width="50px" height="50px">
-                      <use xlink:href="/local/img/svg/icons.svg#menuBurger"></use>
-                    </svg><span class="arrBtn__abs">
-                      <svg width="32px" height="17px">
-                        <use xlink:href="/local/img/svg/icons.svg#arrowBurger"></use>
-                      </svg></span><span class="arrBtn__cls">
-                      <svg width="16px" height="16px">
-                        <use xlink:href="/local/img/svg/icons.svg#cls"></use>
-                      </svg></span></span></span></button>
+                        <button class="arrBtn arrBtn-white" data-modal-open="m-3">
+                            <span class="arrBtn__inner">
+                                <span class="arrBtn__text">Подбор недвижимости</span>
+                                <span class="arrBtn__ico">
+                                    <svg width="50px" height="50px">
+                                      <use xlink:href="/local/img/svg/icons.svg#menuBurger"></use>
+                                    </svg>
+                                    <span class="arrBtn__abs">
+                                      <svg width="32px" height="17px">
+                                        <use xlink:href="/local/img/svg/icons.svg#arrowBurger"></use>
+                                      </svg>
+                                    </span>
+                                    <span class="arrBtn__cls">
+                                      <svg width="16px" height="16px">
+                                        <use xlink:href="/local/img/svg/icons.svg#cls"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>
