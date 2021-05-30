@@ -11,5 +11,5 @@
     <?endforeach;?>
 <?$strReturn = '</div>';?>
 
-<?return $strReturn;?>
+<?echo $strReturn;?>
 

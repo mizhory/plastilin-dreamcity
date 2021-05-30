@@ -1,18 +1,26 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<?if(!empty($arResult)):?>
+<?if(!empty($arResult)):
+$previousLevel = 0;
+$i=0;
+?>
 
     <?foreach($arResult as $k=>$arMenuElem):?>
-        <?if ($previousLevel && $arItem["DEPTH_LEVEL"] < $previousLevel):?>
-                <?=str_repeat("</ul></div>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
+        <?if ($previousLevel && $arMenuElem["DEPTH_LEVEL"] < $previousLevel):?>
+                <?=str_repeat("</ul></div>", ($previousLevel - $arMenuElem["DEPTH_LEVEL"]));?>
         <?endif?>
-        <?if($arMenuElem["IS_PARENT"]==true):?>
-            <div class="collapsedNext<?if($arMenuElem["SELECTED"]=='true'):?> __active<?endif;?>" data-menu-content="<?=$k?>">
+        <?if($arMenuElem["IS_PARENT"]==true):
+$parent_menu_id = $arMenuElem['PARAMS']['MENU_ID'];
+$i++;
+?>
+            <div class="collapsedNext<?if($arMenuElem["SELECTED"]=='true'):?> __active<?endif;?>" data-menu-content="<?=$i?>">
                 <div class="mobileHLink"><a href="<?=$arMenuElem["LINK"]?>">Смотреть все</a></div>
                 <ul class="nextMenu">
         <?else:?>
-                <li class="nextMenu__item"><a class="nextMenu__link" href="<?=$arMenuElem["LINK"]?>"><?=$arMenuElem["TEXT"]?></a></li>
-        <?endif;?>
-        <?$previousLevel = $arItem["DEPTH_LEVEL"];?>
+					<?if($arMenuElem['PARAMS']['MENU_ID'] == $parent_menu_id):?>
+                		<li class="nextMenu__item"><a class="nextMenu__link" href="<?=$arMenuElem["LINK"]?>"><?=$arMenuElem["TEXT"]?></a></li>
+					<?endif;?>
+		<?endif;?>
+        <?$previousLevel = $arMenuElem["DEPTH_LEVEL"];?>
     <?endforeach;?>
     <?if ($previousLevel > 1)://close last item tags?>
         <?=str_repeat("</ul></div>", ($previousLevel-1) );?>
